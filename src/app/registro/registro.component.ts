@@ -10,6 +10,10 @@ import { Registro } from '../interfaces/reg.interface';
 
 export class RegistroComponent {
 
+    ngOnInit() {
+        this.agregar();
+    }
+
     reg: Registro = {
         nombre: '',
         apellido: '',
@@ -20,12 +24,7 @@ export class RegistroComponent {
     @Output() onNuevoRegistro: EventEmitter<Registro> = new EventEmitter();
 
     agregar(){
-        if (this.reg.nombre.trim().length === 0) {
-            return;
-        }
-
         this.onNuevoRegistro.emit(this.reg);
-
     }
 
     reset(){
