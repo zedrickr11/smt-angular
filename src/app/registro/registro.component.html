@@ -1,0 +1,20 @@
+<h1>Registro</h1>
+<hr>
+<form (ngSubmit)="agregar()">
+    <label>Nombre</label>
+    <input type="text" placeholder="Nombre..." name="nombre" [(ngModel)]="reg.nombre">
+
+    <label>Apellido</label>
+    <input type="text" placeholder="Apellido..." name="apellido" [(ngModel)]="reg.apellido">
+
+    <label>Correo electrónico</label>
+    <input type="text" placeholder="Email..." name="email" [(ngModel)]="reg.email">
+
+    <label>DPI</label>
+    <input type="text" placeholder="DPI..." name="dpi" [(ngModel)]="reg.dpi">
+
+    <br>
+
+    <button (click)="reset()" type="button">Resetear</button>
+    <button type="submit">Enviar</button>
+</form>
